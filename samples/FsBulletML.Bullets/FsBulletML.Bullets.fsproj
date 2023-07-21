@@ -9,10 +9,10 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FsBulletML.Bullets</RootNamespace>
     <AssemblyName>FsBulletML.Bullets</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Name>FsBulletML.Bullets</Name>
     <TargetFrameworkProfile />
-    <TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>4.4.3.0</TargetFSharpCoreVersion>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug 4.5|AnyCPU' ">
@@ -120,6 +120,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core">
+      <HintPath>..\..\lib\fsharp.core.5.0.0\FSharp.Core.dll</HintPath>
+    </Reference>
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
     </Reference>
@@ -143,10 +146,10 @@
     </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>echo f | xcopy "$(TargetPath)" "C:\Github\FsBulletML\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\" /Y
-echo f | xcopy "$(TargetDir)$(TargetName).pdb" "C:\Github\FsBulletML\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\" /Y
-echo f | xcopy "$(TargetDir)FSharp.Core.dll" "C:\Github\FsBulletML\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\" /Y
-"C:\Program Files (x86)\Unity\Editor\Data\Mono\lib\mono\2.0\pdb2mdb.exe" "C:\Github\FsBulletML\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\$(TargetFileName)"</PostBuildEvent>
+    <PostBuildEvent>echo f | xcopy "$(TargetPath)" "$(SolutionDir)\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\" /Y
+echo f | xcopy "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\" /Y
+echo f | xcopy "$(TargetDir)FSharp.Core.dll" "$(SolutionDir)\samples\FsBulletML.Sample.Unity2D.FSharp\Assets\FsBulletML\" /Y
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

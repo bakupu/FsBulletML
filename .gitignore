@@ -45,3 +45,4 @@ nuget/*.nupkg
 # Build artifacts
 FsBulletML.*.dll
 FsBulletML.*.pdb
+/samples/FsBulletML.Sample.Unity2D.FSharp/Assets/FsBulletML/FSharp.Core.dll
