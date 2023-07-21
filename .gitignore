@@ -22,6 +22,9 @@ x64/
 # Document
 docs/output/
 
+# NuGet
+/.nuget/NuGet.exe
+
 # NuGet package
 packages/
 nuget/*.nupkg
