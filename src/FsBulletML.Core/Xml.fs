@@ -84,7 +84,6 @@ module Xml =
   [<Literal>]
   let sysid = "http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml.dtd"
 
-  [<Extension>]
   type AST.XmlNode with 
     [<Extension>]
     member private this.WriteContentTo (writer:XmlWriter) =

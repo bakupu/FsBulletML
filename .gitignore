@@ -41,3 +41,7 @@ nuget/*.nupkg
 /*.userprefs
 /*.pidb
 /*.booproj
+
+# Build artifacts
+FsBulletML.*.dll
+FsBulletML.*.pdb
